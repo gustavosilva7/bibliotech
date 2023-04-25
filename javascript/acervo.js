@@ -59,37 +59,53 @@ const list = document.querySelector(".livroAcervo")
 
 const barraDePesquisaAcervo = document.querySelector('#pesquisaAcervo')
 const livroAcervo = document.querySelector(".livroAcervo")
-const p = document.querySelectorAll(".p");
+
+
 const totalBooks = document.getElementById("totalBooks")
-
-
 
 barraDePesquisaAcervo.addEventListener('input', function(event) {
   const inputValue = event.target.value.trim().toLowerCase()
-  Array.from(livroAcervo.children)
-  .filter(livroUnico => !livroUnico.querySelector("span").textContent.toLowerCase().includes(inputValue)) 
-  .forEach(livroUnico =>{
-   livroUnico.style.display = "none"
+
+    Array.from(livroAcervo.children)
+    .filter(livroUnico => {
+    const spans = livroUnico.querySelectorAll(".d2 span");
+    for (const span of spans) {
+      if (span.textContent.toLowerCase().includes(inputValue)) {
+        return true;
+      }
+    }
+    return false;
+  })
+  .forEach(livroUnico => {
+    livroUnico.style.display = "flex";
 
     let totalB = ''
     const elementosFlex = Array.from(livroAcervo.children).filter(livroUnico => livroUnico.style.display === "flex");
-                totalB += `<h2>${elementosFlex.length}</h2>`
-
+        totalB += `<h2>${elementosFlex.length}</h2>`
     totalBooks.innerHTML = totalB 
   })
   
+
   Array.from(livroAcervo.children)
-  .filter(livroUnico => livroUnico.querySelector("span").textContent.toLowerCase().includes(inputValue)) 
-  .forEach(livroUnico =>{
-   livroUnico.style.display = "flex"
-
-
-   let totalB = ''
-   const elementosFlex = Array.from(livroAcervo.children).filter(livroUnico => livroUnico.style.display === "flex");
-               totalB += `<h2>${elementosFlex.length}</h2>`
-
-   totalBooks.innerHTML = totalB 
+    .filter(livroUnico => {
+    const spans = livroUnico.querySelectorAll(".d2 span");
+    for (const span of spans) {
+      if (span.textContent.toLowerCase().includes(inputValue)) {
+        return false;
+      }
+    }
+    return true;
   })
+  .forEach(livroUnico => {
+    livroUnico.style.display = "none";
+
+    let totalB = ''
+    const elementosFlex = Array.from(livroAcervo.children).filter(livroUnico => livroUnico.style.display === "flex");
+        totalB += `<h2>${elementosFlex.length}</h2>`
+    totalBooks.innerHTML = totalB 
+  })
+  
+
 });
 
 
