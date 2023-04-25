@@ -14,15 +14,15 @@ const list = document.querySelector(".livroAcervo")
                     </div>
                     <div class="d2" style="display: flex; flex-direction: column; width: 90%; height: 100%; padding: 0 2%">    
                         <div style="display: flex; flex-direction: row; align-items: center;  gap: 10px; height: 40px">
-                            <p>Nome do Livro: ${livro.nomeDoLivro}</p>
-                            <p>Autor do Livro: ${livro.nomeDoAutor}</p>
+                            <p class="p">Nome do Livro: <span>${livro.nomeDoLivro}</span></p>
+                            <p class="p">Autor do Livro: <span>${livro.nomeDoAutor}</span></p>
                         </div>
                         <div style="display: none; flex-direction: row; gap: 2%;">
-                            <p>Tombo do Livro: ${livro.tomboDoLivro}</p>
-                            <p>Data de Chegada: ${livro.dataChegada}</p>
-                            <p>Data de Lançamento: ${livro.Lancamento}</p>
-                            <p>Volume: ${livro.volume}</p>
-                            <p>Editora: ${livro.editora}</p>      
+                            <p class="p">Tombo do Livro: <span>${livro.tomboDoLivro}</span></p>
+                            <p class="p">Data de Chegada: <span>${livro.dataChegada}</span></p>
+                            <p class="p">Data de Lançamento: <span>${livro.Lancamento}</span></p>
+                            <p class="p">Volume: <span>${livro.volume}</span></p>
+                            <p class="p">Editora: <span>${livro.editora}</span></p>      
                         </div>    
                     </div>
                     <div class="d3" style="width: 5%; height: 100%;">
@@ -56,3 +56,83 @@ const list = document.querySelector(".livroAcervo")
     })
 })
         
+
+const barraDePesquisaAcervo = document.querySelector('#pesquisaAcervo')
+const livroAcervo = document.querySelector(".livroAcervo")
+const p = document.querySelectorAll(".p");
+
+barraDePesquisaAcervo.addEventListener('input', function(event) {
+  
+//   const inputValue = event.target.value.trim().toLowerCase()
+//   Array.from(livroAcervo.children)
+//   .filter(livroUnico => !livroUnico.textContent.toLowerCase().includes(inputValue)) 
+//   .forEach(livroUnico =>{
+//    livroUnico.style.display = "none"
+//   })
+  
+//   Array.from(livroAcervo.children)
+//   .filter(livroUnico => livroUnico.textContent.toLowerCase().includes(inputValue)) 
+//   .forEach(livroUnico =>{
+//    livroUnico.style.display = "flex"
+//   })
+
+
+// const inputValue = event.target.value.trim().toLowerCase()
+// Array.from(contentP)
+// .filter(livroUnico => !livroUnico.textContent.toLowerCase().includes(inputValue)) 
+// .forEach(livroUnico =>{
+//  livroUnico.style.display = "none"
+// })
+
+// Array.from(contentP)
+// .filter(livroUnico => livroUnico.textContent.toLowerCase().includes(inputValue)) 
+// .forEach(livroUnico =>{
+//  livroUnico.style.display = "flex"
+// })
+
+const inputValue = event.target.value.trim().toLowerCase()
+// Array.from(p.children)
+// .filter(spantext => !spantext.textContent.toLowerCase().includes(inputValue)) 
+// .forEach(spantext =>{
+//  spantext.style.display = "none"
+// })
+
+// Array.from(p.children)
+// .filter(spantext => spantext.textContent.toLowerCase().includes(inputValue)) 
+// .forEach(spantext =>{
+//  spantext.style.display = "flex"
+// })
+
+
+
+p.forEach(para =>{
+    Array.from(para.children)
+.filter(livroUnico => !livroUnico.textContent.toLowerCase().includes(inputValue)) 
+.forEach(livroUnico =>{
+ livroUnico.style.display = "none"
+})
+
+Array.from(para.children)
+.filter(livroUnico => livroUnico.textContent.toLowerCase().includes(inputValue)) 
+.forEach(livroUnico =>{
+ livroUnico.style.display = "flex"
+})  
+})
+
+
+// console.log(livroAcervo)
+// console.log(p)
+});
+
+
+
+const cadLivro = document.querySelector('#cadLivro')
+const dialogCadLivro = document.querySelector("#dialogCadLivro")
+const btnConfirmarCadLivro = document.querySelector("#btnConfirmarCadLivro")
+
+cadLivro.addEventListener("click", function(){
+    dialogCadLivro.showModal()
+})
+btnConfirmarCadLivro.addEventListener("click", ()=>{
+    dialogCadLivro.close()
+})

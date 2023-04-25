@@ -1,6 +1,6 @@
 const corPendentes = "#FC400F"
 const corEmprestados = "#E88919"
-const livroShow = document.querySelector("#livroShow")
+  const livroShow = document.querySelector("#livroShow")
 
 fetch("./json/dados.json").then((resposta) =>{
  resposta.json().then((dados) =>{
