@@ -1,24 +1,24 @@
 {
     "alunosGerais": [
      {
-      "nomeDoAluno": "Gustavo",
+      "nomeDoAluno": "Gustavo alexandre da silva",
       "serie": "3",
       "turma": "informática"
      },
      {
-        "nomeDoAluno": "juca",
+        "nomeDoAluno": "hytalo pereira da silva",
         "serie": "3",
-        "turma": "informática"
+        "turma": "segurança"
        },
        {
-        "nomeDoAluno": "joao",
+        "nomeDoAluno": "Gustavo alexandre da silva",
         "serie": "3",
-        "turma": "informática"
+        "turma": "enfer"
        },
        {
-        "nomeDoAluno": "silva",
+        "nomeDoAluno": "joao felix magneto de santos",
         "serie": "3",
-        "turma": "informática"
+        "turma": "finanças"
        }
     ]
    }

@@ -134,34 +134,34 @@
                 <h3>Empréstimo de livros</h3>
                 
                 <form class="formNovoEmprestimo">
-                    <div class="divInputForm">
+                    <div class="divInputForm" id="divNomeLivro">
                         <label for="inputEmprestimoLivro">Nome do livro</label>
-                        <input type="text" id="inputEmprestimoLivro" class="inputEmprestimoLivro">
-                        <p for="inputEmprestimoLivro" style="display: none;"> Preencha o campo acima</p>
+                        <input type="text" id="inputEmprestimoLivro" class="inputEmprestimoLivro" required>
+                       
                     </div>
                     <div class="divInputFormInforLivro">
                         <div>
                             <label for="inputEmprestimoName">Autor</label>
-                            <input type="text" id="inputEmprestimoAutor" class="inputEmprestimoName">
-                            <p for="inputEmprestimoLivro" style="display: none;"> Preencha o campo acima</p></div>
+                            <input type="text" id="inputEmprestimoAutor" class="inputEmprestimoName" readonly>
+                           </div>
                         <div>
                             <label for="inputEmprestimoName">Tombo</label>
-                            <input type="text" id="inputEmprestimoTombo" class="inputEmprestimoName">
-                            <p for="inputEmprestimoLivro" style="display: none;"> Preencha o campo acima</p></div>
+                            <input type="text" id="inputEmprestimoTombo" class="inputEmprestimoName" readonly>
+                           </div>
                     </div>
                     
-                    <div class="divInputForm">
+                    <div class="divInputForm" id="divNomeDoAluno">
                         <label for="inputEmprestimoName">Nome do Aluno</label>
-                        <input type="text" id="inputEmprestimoNomeAluno" class="inputEmprestimoName">
+                        <input type="text" id="inputEmprestimoNomeAluno" class="inputEmprestimoName" required>
                     </div>
                     <div class="divInputFormDouble">
                         <div>
                             <label for="inputEmprestimoName">Turma</label>
-                            <input type="text" id="inputTurma">
+                            <input type="text" id="inputTurma" readonly>
                         </div>
                         <div>
                             <label for="inputEmprestimoName">Série</label>
-                            <input type="text">
+                            <input type="text" id="inputSerie" readonly>
                         </div>
                     </div>
                     <div class="btnEnviarEmprestimo">
