@@ -156,14 +156,14 @@
 }
 
 #balao1{
-    background-color: #05704F;
+    background-color: #fff;
+    color: #000;
 }
 #balao2{
     background-color: #36383E;
 }
 #balao3{
-    background-color: #fff;
-    color: black;
+    background-color: #05704F;
 }
 .pTitle{
     font-size: 1.5rem;
@@ -371,12 +371,13 @@
 }
 .mainEmprestimosLeft h3{
     color: #fff;
-    font-size: 1.9rem;
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 195%;
 }
 .formNovoEmprestimo{
     width: 100%;
-    height: 60%;
+    height: 67%;
+    font-size: x-large;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
@@ -388,7 +389,7 @@
     align-items: first baseline;
     justify-content: left;
     width: 100%;
-    height: 16%;
+    height: 19%;
     gap: 5px;
 }
 .divInputForm label{
@@ -403,13 +404,42 @@
     border-radius: 5px;
     box-shadow: 0 0 2px #2b2b2b;
 }
+.divInputFormInforLivro{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 21%;
+    gap: 2%;
+}
+.divInputFormInforLivro div{
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    justify-content: left;
+    width: 50%;
+    height: 100%;
+    gap: 5px;
+}
+.divInputFormInforLivro div label{
+    font-size: 60%;
+    color: #fff;
+    font-weight: 900;
+}
+.divInputFormInforLivro div input{
+    width: 100%;
+    height: 55%;
+    border: none;
+    border-radius: 5px;
+} 
 .divInputFormDouble{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 16%;
+    height: 21%;
     gap: 2%;
 }
 .divInputFormDouble div{
@@ -426,7 +456,7 @@
     color: #fff;
     font-weight: 900;
 }
-.divInputFormDouble div select{
+.divInputFormDouble div input{
     width: 100%;
     height: 55%;
     border: none;
@@ -447,13 +477,13 @@
     height: 75%;
     width: 55%;
     color: #000;
-    font-size: larger;
+    font-size: x-large;
     background-color: #fff;
     
 }
 .mainEmprestimo .mainEmprestimosRight{
     height: 100%;
-    width: 50%;
+    width: 46%;
     position: relative;
 }
 .calendario{

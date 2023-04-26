@@ -136,43 +136,38 @@
                 <form class="formNovoEmprestimo">
                     <div class="divInputForm">
                         <label for="inputEmprestimoLivro">Nome do livro</label>
-                        <input type="text" name="inputEmprestimoLivro" id="inputEmprestimoLivro" class="inputEmprestimoLivro">
+                        <input type="text" id="inputEmprestimoLivro" class="inputEmprestimoLivro">
                         <p for="inputEmprestimoLivro" style="display: none;"> Preencha o campo acima</p>
                     </div>
+                    <div class="divInputFormInforLivro">
+                        <div>
+                            <label for="inputEmprestimoName">Autor</label>
+                            <input type="text" id="inputEmprestimoAutor" class="inputEmprestimoName">
+                            <p for="inputEmprestimoLivro" style="display: none;"> Preencha o campo acima</p></div>
+                        <div>
+                            <label for="inputEmprestimoName">Tombo</label>
+                            <input type="text" id="inputEmprestimoTombo" class="inputEmprestimoName">
+                            <p for="inputEmprestimoLivro" style="display: none;"> Preencha o campo acima</p></div>
+                    </div>
+                    
                     <div class="divInputForm">
-                        <label for="inputEmprestimoName">Nome do aluno</label>
-                        <input type="text" name="inputEmprestimoName" id="inputEmprestimoName" class="inputEmprestimoName">
-                        <p for="inputEmprestimoLivro" style="display: none;"> Preencha o campo acima</p>
+                        <label for="inputEmprestimoName">Nome do Aluno</label>
+                        <input type="text" id="inputEmprestimoNomeAluno" class="inputEmprestimoName">
                     </div>
                     <div class="divInputFormDouble">
                         <div>
                             <label for="inputEmprestimoName">Turma</label>
-                            <select name="" id="">
-                                <option value=""></option>
-                                <option value="">Agronegócio</option>
-                                <option value="">Enfermagem</option>
-                                <option value="">Finanças</option>
-                                <option value="">Informática</option>
-                                <option value="">Segurança do trabalho</option>
-                            </select>
+                            <input type="text" id="inputTurma">
                         </div>
                         <div>
                             <label for="inputEmprestimoName">Série</label>
-                            <select name="" id="">
-                                <option value=""></option>
-                                <option value="">1º ANO</option>
-                                <option value="">2º ANO</option>
-                                <option value="">3º ANO</option>
-                            </select>
+                            <input type="text">
                         </div>
-                    </div>
-                    <div class="divInputForm">
-                        <label for="inputEmprestimoName">Data de devolução</label>
-                        <input type="text" name="inputEmprestimoName" id="inputEmprestimoData" class="inputEmprestimoName" readonly>
                     </div>
                     <div class="btnEnviarEmprestimo">
                         <button class="btnConfirmeEmprestimo" id="btnConfirmeEmprestimo" type="button">Confirmar</button>
                     </div>
+                    
                 </form>
             </div>
              <div class="mainEmprestimosRight">
