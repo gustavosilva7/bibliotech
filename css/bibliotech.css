@@ -131,7 +131,7 @@
     .dialogLoginRight{
         height: 100%;
         width: 50%;
-        background-color: rgba(5, 112, 79, 0.82);
+        background-color: rgba(5, 112, 79, 0.9);
         position: relative;
         display: flex;
         justify-content: center;
@@ -140,7 +140,7 @@
         /* display: none;     */
     }
     .dialogLoginRight #imgRight{
-        opacity: 0.6;
+        opacity: 0.1;
         height: 100%;
         width: 100%;
         position: absolute;

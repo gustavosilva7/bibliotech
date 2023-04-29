@@ -9,7 +9,7 @@ const list = document.querySelector(".livroAcervo")
             listCont += 
             `<section class="sectionLivro"
             style=" display: flex; flex-direction: row; font-weight: 600; background-color: #fff; width: 100%; height: auto; border-radius: 20px;">
-                    <div class="d1" style="display: flex; justify-content: center; align-items: center; width: 5%; height: 100%; background-color: #05704F; border-radius: 20px 0 0 20px" >
+                    <div class="d1" onclick="editar()" style="display: flex; justify-content: center; align-items: center; width: 5%; height: 100%; background-color: #05704F; border-radius: 20px 0 0 20px" >
                         <img src="img/editAcervo.png">
                     </div>
                     <div class="d2" style="display: flex; flex-direction: column; width: 90%; height: 100%; padding: 0 2%">    
@@ -33,7 +33,23 @@ const list = document.querySelector(".livroAcervo")
             </section>`
         
             list.innerHTML = listCont
-        
+            
+            const editBtns = document.querySelectorAll(".d1")
+            editBtns.forEach(btnEdit => {
+              btnEdit.addEventListener("click", (event) => {
+                // verifique se o elemento btnEdit é um nó DOM válido antes de chamar closest()
+                if (typeof btnEdit.closest === "function") {
+                  const sectionLivro = btnEdit.closest(".sectionLivro")
+                  const span = sectionLivro.querySelector(".d2 div:nth-child(1) p:nth-child(1) span")
+            
+                  let newName = prompt("Digite o novo nome para este livro:")
+            
+                  span.innerText = newName
+                }
+              })
+            })
+            
+
             function toggleDisplay(btn) {
                 const section = btn.closest(".sectionLivro");
                 const div2 = section.querySelector('.d2 div:last-child');
