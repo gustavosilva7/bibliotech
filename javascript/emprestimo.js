@@ -129,9 +129,9 @@ document.addEventListener("click", (event) => {
 // const btnEnviar =document.getElementById("btnConfirmeEmprestimo")
 
 
-const btnEnviar = document.getElementById("btnConfirmeEmprestimo")
+const btnEnviarEmpres = document.getElementById("btnConfirmeEmprestimo")
 
-btnEnviar.onclick = ()=>{
+btnEnviarEmpres.onclick = ()=>{
     if(
         document.getElementById("inputEmprestimoLivro").value != "" && document.getElementById("inputEmprestimoNomeAluno").value != ""){
             alert(document.getElementById("inputEmprestimoLivro").value)

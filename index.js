@@ -1,18 +1,19 @@
-const express = require("express")
+import express, { Router, json } from "express";
 const server = express()
-const router = express.Router()
-const fs = require('fs')
+const router = Router()
+import { readFileSync, writeFileSync } from 'fs';
+import path from 'path';
 
-server.use(express.json({extended: true}))
+server.use(json({extended: true}))
 
 const readFile = () => {
-    const content = fs.readFileSync('./data/items.json', 'utf-8')
+    const content = readFileSync('./data/items.json', 'utf-8')
     return JSON.parse(content)
 }
 
 const writeFile = (content) => {
     const updateFile = JSON.stringify(content)
-    fs.writeFileSync('./data/items.json', updateFile, 'utf-8')
+    writeFileSync('./data/items.json', updateFile, 'utf-8')
 }
 
 router.get('/', (req, res) => {
@@ -29,7 +30,7 @@ router.post('/', (req, res) => {
     res.send({ id, name, email, phone })
 })
 
-router.put('/:id', (req, res) => {
+router.put('/', (req, res) => {
     const {id} = req.params
 
     const { name, email, phone } = req.body

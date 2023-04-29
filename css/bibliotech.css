@@ -15,6 +15,7 @@
     width: 100%;
     display: flex;
     background-color: #242529;
+    position: relative;
 }
 .aside{
     height: 100vh;
@@ -97,9 +98,121 @@
     transform: translate(-50%, -50%);
 }
 /* PARTE INFERIOR ASIDE */
+/* SECTION LOGIN */
+    .secFormLoginUser{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        background: transparent;
+        backdrop-filter: blur(5px);
+    }
+    .formLoginUser[open]{
+        width: 80%;
+        height: 80%;
+        border: none;
+        border-radius: 20px;
+        display: flex;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: 1;
+    }
+    .dialogLoginLeft{
+        height: 100%;
+        width: 50%;
+        background-color: #fff;
+        border-radius: 20px 0 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .dialogLoginRight{
+        height: 100%;
+        width: 50%;
+        background-color: rgba(5, 112, 79, 0.82);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 20px 20px 0;
+        /* display: none;     */
+    }
+    .dialogLoginRight #imgRight{
+        opacity: 0.6;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+    }
+    .formLogin{
+        opacity: 1;
+        height: 50%;
+        width: 50%;
+        position: absolute;
+        z-index: 4;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 5%;
+        border-radius: 20px;
+    }
+    .cabecalhoFormLogin{
+        display: flex;
+        width: 100%;
+        height: 10%;
+        justify-content: center;
+        align-items: center;
+    }
+    .cabecalhoFormLogin img{
+        width: 28px;
+        height: 28px;
+    }
+    .cabecalhoFormLogin h2{
+        color: #05704F;
+        font-weight: 100;
+    }
+    .divDadosFormLogin{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 28%;
+        justify-content: center;
+    }
+    .divDadosFormLogin label{
+        color: #878787;
+        font-size: 75%;
+        margin-left: 15px;
+    }
+    .divDadosFormLogin input{
+        height: 60%;
+        width: 100%;
+        border-radius: 15px;
+        padding-left: 15px;
+        border: 2px solid #ccc;
+    }
+    .btnConfirmeLogin{
+        display: flex;
+        width: 100%;
+        height: 20%;
+        justify-content: center;
+        align-items: center;
+    }
+    .btnConfirmeLogin button{
+        width: 50%;
+        height: 100%;
+        background-color: #05704f;
+        border: none;
+        border-radius: 15px;
+        color: #000;
+        font-size: large;
+        font-weight: 600;
 
-
-
+    }
 /* PARTE MAIN */
 .main{
     width: 80%;
