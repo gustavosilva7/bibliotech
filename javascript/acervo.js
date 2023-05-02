@@ -350,3 +350,15 @@ cadLivro.addEventListener("click", function () {
 btnConfirmarCadLivro.addEventListener("click", () => {
   dialogCadLivro.close()
 })
+
+const btnBaixarAcervo = document.querySelector("#btnFooterBaixarAcervo")
+
+btnBaixarAcervo.onclick = ()=>{
+  html2canvas(list).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, "PNG", 1, 1 );
+        pdf.save("livros.pdf");
+      });
+  
+}
