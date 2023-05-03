@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,13 +11,16 @@
     <link rel="stylesheet" href="./css/listaHistorico.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+        integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+        crossorigin="anonymous"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
 </head>
+
 <body>
     <section class="container">
-        <section class="secFormLoginUser" style="display: none;">
+        <section class="secFormLoginUser">
             <dialog class="formLoginUser" open>
                 <div class="dialogLoginLeft">
                     <img src="img/fundoLeft.png">
@@ -26,7 +30,7 @@
                     <form class="formLogin">
                         <div class="cabecalhoFormLogin">
                             <img src="img/Logo.png" alt="LOGO">
-                            <h2>Bibiotech</h2>
+                            <h2>Bibliotech</h2>
                         </div>
                         <div class="divDadosFormLogin">
                             <label for="nomeDeUsuarioLogin">Nome de usuário</label>
@@ -34,7 +38,7 @@
                         </div>
                         <div class="divDadosFormLogin">
                             <label for="senhaDeUsuarioLogin">Senha</label>
-                            <input type="text" id="senhaDeUsuarioLogin" placeholder="insira sua senha">
+                            <input type="password" id="senhaDeUsuarioLogin" placeholder="insira sua senha">
                         </div>
                         <div class="btnConfirmeLogin">
                             <button type="button">Entrar</button>
@@ -46,41 +50,41 @@
         <aside class="aside" id="aside">
             <section class="parteSuperior">
                 <div class="divImgLogo">
-                    <img src="img/logo.png" class="imgLogo"> 
+                    <img src="img/logo.png" class="imgLogo">
                 </div>
                 <div class="divPerfil">
                     <img src="img/user.png" class="imgPerfil">
                     <h3>EEEP Lúcia Helena Viana Ribeiro</h3>
                 </div>
                 <div class="divContent">
-                 
- 
-                    <button class="btnMain" id="btnMain1" autofocus >
+
+
+                    <button class="btnMain" id="btnMain1" autofocus>
                         <img src="img/inicio.png" class="icon" id="btnMainImg1">
-                        <h5  id="btnMainH1">Início</h5>
+                        <h5 id="btnMainH1">Início</h5>
                     </button>
-                    
+
                     <button class="btnMain" id="btnMain2">
-                        <img src="img/historico.png" class="icon"  id="btnMainImg2">
+                        <img src="img/historico.png" class="icon" id="btnMainImg2">
                         <h5 id="btnMainH2">Histórico</h5>
                     </button>
 
                     <button class="btnMain" id="btnMain3">
-                        <img src="img/emprestimo.png" class="icon"  id="btnMainImg3">
-                        <h5  id="btnMainH3">Empréstimos</h5>
+                        <img src="img/emprestimo.png" class="icon" id="btnMainImg3">
+                        <h5 id="btnMainH3">Empréstimos</h5>
                     </button>
 
                     <button class="btnMain" id="btnMain4">
-                        <img src="img/acervo.png" class="icon"  id="btnMainImg4">
-                        <h5  id="btnMainH4">Acervo</h5>
+                        <img src="img/acervo.png" class="icon" id="btnMainImg4">
+                        <h5 id="btnMainH4">Acervo</h5>
                     </button>
-                    
-                    
+
+
                 </div>
             </section>
-            
+
         </aside>
-        
+
         <main class="main" id="main">
             <!-- MAIN INICIO -->
             <section class="mainInicio">
@@ -88,55 +92,55 @@
                     <h2>Biblioteca</h2>
                 </div>
                 <div class="mainInicioCenter">
-                    
-                        <buttton class="balao" id="balao1">
-                            <p class="pTitle">Total de livros</p>
-                            <p class="pNum">
-                                0
-                            </p>
-                        </buttton>
-                        <buttton class="balao" id="balao2">
-                            <p class="pTitle">Emprestimos</p>
-                            <p class="pNum">
-                                0
-                            </p>
-                        </buttton>
-                        <buttton class="balao" id="balao3">
-                            <p class="pTitle">Pendentes</p>
-                            <p class="pNum">
-                                0
-                            </p>
-                        </buttton>
-                    
+
+                    <buttton class="balao" id="balao1">
+                        <p class="pTitle">Total de livros</p>
+                        <p class="pNum">
+                            0
+                        </p>
+                    </buttton>
+                    <buttton class="balao" id="balao2">
+                        <p class="pTitle">Emprestimos</p>
+                        <p class="pNum">
+                            0
+                        </p>
+                    </buttton>
+                    <buttton class="balao" id="balao3">
+                        <p class="pTitle">Pendentes</p>
+                        <p class="pNum">
+                            0
+                        </p>
+                    </buttton>
+
                 </div>
                 <div class="mainInicioInferior">
-                  
+
 
                     <div class="conteudo">
                         <div class="topo">
                             <input type="text" id="inputNovaTarefa" placeholder="Adicione uma nova anotação">
                             <button id="btnAddTarefa">
-                                <i class='bx bx-bookmark-alt-plus' ></i>
+                                <i class='bx bx-bookmark-alt-plus'></i>
                                 <ion-icon name="add-circle-outline"></ion-icon>
                             </button>
                         </div>
                         <ul id="listaTarefa">
-                            
+
                         </ul>
                     </div>
-                    
+
                 </div>
             </section>
-           
+
             <!-- MAIN HISTORICO -->
-            
+
             <section class="mainHistorico">
                 <div class="mainHistoricoSuperior">
                     <h2>Histórico</h2>
                     <input type="search" name="search" id="search" placeholder="Digite o nome do seu livro">
                 </div>
-                       
-                <div class="mainHistoricoCenter">       
+
+                <div class="mainHistoricoCenter">
                     <div class="divFiltroMenu" id="filtroPendente">
                         <h4 id="textPende">Pendentes</h4>
                         <div class="corFiltro" id="corFiltroPendente"></div>
@@ -146,94 +150,95 @@
                         <div class="corFiltro" id="corFiltroEmprestado"></div>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="mainHistoricoInferior">
-                 <div id="livroShow" class="livroShow"></div>
+                    <div id="livroShow" class="livroShow"></div>
                 </div>
-                
-                
-            </section>
-            
-            <!-- MAIN EMPRESTIMOS -->
-            
-            <section class="mainEmprestimo">
-             <div class="mainEmprestimosLeft">
-                <h3>Empréstimo de livros</h3>
-                
-                <form class="formNovoEmprestimo">
-                    <div class="divInputForm" id="divNomeLivro">
-                        <label for="inputEmprestimoLivro">Nome do livro</label>
-                        <input type="text" id="inputEmprestimoLivro" class="inputEmprestimoLivro" required>
-                       
-                    </div>
-                    <div class="divInputFormInforLivro">
-                        <div>
-                            <label for="inputEmprestimoName">Autor</label>
-                            <input type="text" id="inputEmprestimoAutor" class="inputEmprestimoName" readonly>
-                           </div>
-                        <div>
-                            <label for="inputEmprestimoName">Tombo</label>
-                            <input type="text" id="inputEmprestimoTombo" class="inputEmprestimoName" readonly>
-                           </div>
-                    </div>
-                    
-                    <div class="divInputForm" id="divNomeDoAluno">
-                        <label for="inputEmprestimoName">Nome do Aluno</label>
-                        <input type="text" id="inputEmprestimoNomeAluno" class="inputEmprestimoName" required>
-                    </div>
-                    <div class="divInputFormDouble">
-                        <div>
-                            <label for="inputEmprestimoName">Turma</label>
-                            <input type="text" id="inputTurma" readonly>
-                        </div>
-                        <div>
-                            <label for="inputEmprestimoName">Série</label>
-                            <input type="text" id="inputSerie" readonly>
-                        </div>
-                    </div>
-                    <div class="btnEnviarEmprestimo">
-                        <button class="btnConfirmeEmprestimo" id="btnConfirmeEmprestimo" type="button">Confirmar</button>
-                    </div>
-                    
-                </form>
-            </div>
-             <div class="mainEmprestimosRight">
-                <div class="calendario">
-                    <div class="wrapper">
-                        <header>
-                          <h2>Calendário</h2>
-                          <!-- <p class="current-date"></p> -->
-                          <div class="icons">
-                            <!-- <span id="prev" class="material-symbols-rounded">chevron_left</span> -->
-                            <p id="prev"></p>
-                            <h1 class="current-date"></h1>
-                            <p id="next"></p>
-                            <!-- <span id="next" class="material-symbols-rounded">chevron_right</span> -->
-                          </div>
-                        </header>
-                        <div class="calendar">
-                          <ul class="weeks">
-                            <li>Dom</li>
-                            <li>Seg</li>
-                            <li>Ter</li>
-                            <li>Qua</li>
-                            <li>Qui</li>
-                            <li>Sex</li>
-                            <li>Sáb</li>
-                          </ul>
-                          <ul class="days"></ul>
-                        </div>
-                      </div>
-                      
-                </div>
-             </div>
+
+
             </section>
 
-            
+            <!-- MAIN EMPRESTIMOS -->
+
+            <section class="mainEmprestimo">
+                <div class="mainEmprestimosLeft">
+                    <h3>Empréstimo de livros</h3>
+
+                    <form class="formNovoEmprestimo">
+                        <div class="divInputForm" id="divNomeLivro">
+                            <label for="inputEmprestimoLivro">Nome do livro</label>
+                            <input type="text" id="inputEmprestimoLivro" class="inputEmprestimoLivro" required>
+
+                        </div>
+                        <div class="divInputFormInforLivro">
+                            <div>
+                                <label for="inputEmprestimoName">Autor</label>
+                                <input type="text" id="inputEmprestimoAutor" class="inputEmprestimoName" readonly>
+                            </div>
+                            <div>
+                                <label for="inputEmprestimoName">Tombo</label>
+                                <input type="text" id="inputEmprestimoTombo" class="inputEmprestimoName" readonly>
+                            </div>
+                        </div>
+
+                        <div class="divInputForm" id="divNomeDoAluno">
+                            <label for="inputEmprestimoName">Nome do Aluno</label>
+                            <input type="text" id="inputEmprestimoNomeAluno" class="inputEmprestimoName" required>
+                        </div>
+                        <div class="divInputFormDouble">
+                            <div>
+                                <label for="inputEmprestimoName">Turma</label>
+                                <input type="text" id="inputTurma" readonly>
+                            </div>
+                            <div>
+                                <label for="inputEmprestimoName">Série</label>
+                                <input type="text" id="inputSerie" readonly>
+                            </div>
+                        </div>
+                        <div class="btnEnviarEmprestimo">
+                            <button class="btnConfirmeEmprestimo" id="btnConfirmeEmprestimo"
+                                type="button">Confirmar</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="mainEmprestimosRight">
+                    <div class="calendario">
+                        <div class="wrapper">
+                            <header>
+                                <h2>Calendário</h2>
+                                <!-- <p class="current-date"></p> -->
+                                <div class="icons">
+                                    <!-- <span id="prev" class="material-symbols-rounded">chevron_left</span> -->
+                                    <p id="prev"></p>
+                                    <h1 class="current-date"></h1>
+                                    <p id="next"></p>
+                                    <!-- <span id="next" class="material-symbols-rounded">chevron_right</span> -->
+                                </div>
+                            </header>
+                            <div class="calendar">
+                                <ul class="weeks">
+                                    <li>Dom</li>
+                                    <li>Seg</li>
+                                    <li>Ter</li>
+                                    <li>Qua</li>
+                                    <li>Qui</li>
+                                    <li>Sex</li>
+                                    <li>Sáb</li>
+                                </ul>
+                                <ul class="days"></ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
 
             <!-- MAIN ACERVOS -->
-            
+
             <section class="mainAcervo">
                 <div class="mainAcervoSuperior">
                     <h1>Acervo</h1>
@@ -255,54 +260,56 @@
                 </div>
 
                 <dialog id="dialogCadLivro">
-                        <h2>Cadastrar Livro</h2>
-                        <form>
-                            <div class="allDadosCadLivro">
-                                <div class="dadosCadLivro">
-                                    <div>
-                                          <label for="">Nome do Livro</label>
-                                          <input type="text">
-                                    </div>
-                                    <div>
-                                        <label for="">Volume</label>
-                                        <input type="text">
-                                  </div>
+                    <h2>Cadastrar Livro</h2>
+                    <form>
+                        <div class="allDadosCadLivro">
+                            <div class="dadosCadLivro">
+                                <div>
+                                    <label for="">Nome do Livro</label>
+                                    <input type="text">
                                 </div>
-                                <div class="dadosCadLivro">
-                                    <div>
-                                          <label for="">Tombo</label>
-                                          <input type="text">
-                                    </div>
-                                    <div>
-                                        <label for="">Edição</label>
-                                        <input type="text">
-                                  </div>
-                                </div><div class="dadosCadLivro">
-                                    <div>
-                                          <label for="">Autor</label>
-                                          <input type="text">
-                                    </div>
-                                    <div>
-                                        <label for="">Local</label>
-                                        <input type="text">
-                                  </div>
-                                </div><div class="dadosCadLivro">
-                                    <div>
-                                          <label for="">Data de Lançamento</label>
-                                          <input type="text">
-                                    </div>
-                                    <div>
-                                        <label for="">Editora</label>
-                                        <input type="text">
-                                  </div>
-                                </div>       
-                            </div>     
-                            <div class="divInputCadLivro">
-                                <button id="btnConfirmarCadLivro">Cadastrar</button>
+                                <div>
+                                    <label for="">Volume</label>
+                                    <input type="text">
+                                </div>
                             </div>
-                        </form>
+                            <div class="dadosCadLivro">
+                                <div>
+                                    <label for="">Tombo</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Edição</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="dadosCadLivro">
+                                <div>
+                                    <label for="">Autor</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Local</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <div class="dadosCadLivro">
+                                <div>
+                                    <label for="">Data de Lançamento</label>
+                                    <input type="text">
+                                </div>
+                                <div>
+                                    <label for="">Editora</label>
+                                    <input type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divInputCadLivro">
+                            <button id="btnConfirmarCadLivro">Cadastrar</button>
+                        </div>
+                    </form>
                 </dialog>
-             </section>
+            </section>
         </main>
     </section>
     <script src="javascript/login.js"></script>
@@ -313,4 +320,5 @@
     <script src="javascript/emprestimo.js"></script>
     <script src="javascript/acervo.js"></script>
 </body>
+
 </html>

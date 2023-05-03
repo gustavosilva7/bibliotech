@@ -33,69 +33,6 @@ const renderCalendar = () => {
     daysTag.innerHTML = liTag;
 
 
-    
-
-    // let allLiTags = document.querySelectorAll("li");
-
-    // allLiTags.forEach((li) => {
-    //   li.addEventListener("click", () => {
-    //     allLiTags.forEach((li) => {
-    //       li.style.backgroundColor = "";
-    //     });
-    
-    //     let clickedIndex = Array.from(allLiTags).indexOf(li);
-    
-    //     for (let i = 0; i < 15; i++) {
-    //       let nextIndex = clickedIndex + i;
-    //       let nextLi = allLiTags[nextIndex];
-    
-    //       if (nextLi) {
-    //         nextLi.style.backgroundColor = "#05704f";
-    //         nextLi.style.color = "#000"
-
-    //     }
-    //     }
-    //     // let btnConfirmeData = document.createElement("button")
-    //     //     btnConfirmeData.innerHTML = " <img src='img/verifData.png'>"
-    //     //     btnConfirmeData.setAttribute("id", "btnConfData")
-    //     //     document.querySelector(".calendario").appendChild(btnConfirmeData)
-
-
-    //         //     btnConfirmeData.onclick = () => {
-    //         //           let LiTag = allLiTags[clickedIndex + 14];
-    //         //           let LiText = LiTag.textContent;
-                    
-    //         //           const inpDate = document.getElementById("inputEmprestimoData");
-                    
-    //         //           let nextMonth = currMonth;
-    //         //           let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
-                    
-    //         //             if (clickedIndex > lastDateofMonth) {
-    //         //             nextMonth = currMonth;
-    //         //             if (nextMonth > 11) {
-    //         //               nextMonth = 0;
-    //         //               currYear++;
-    //         //             }
-    //         //             inpDate.value =
-    //         //               LiText + "/" + (nextMonth < 9 ? "0" : "") + (nextMonth + 2).toString() + "/" + currYear.toString();
-    //         //           }
-    //         //             else {
-    //         //             inpDate.value =
-    //         //               LiText + "/" + (currMonth < 9 ? "0" : "") + (currMonth + 1).toString() + "/" + currYear.toString();
-    //         //           }
-                    
-    //         //           for (let i = 0; i < 15; i++) {
-    //         //             let nextIndex = clickedIndex + i;
-    //         //             let nextLi = allLiTags[nextIndex];
-                    
-    //         //             if (nextLi) {
-    //         //               nextLi.style.backgroundColor = "";
-    //         //               nextLi.style.color = "";
-    //         //         }
-    //         //     }
-    //         // }
-    //     });
-    // });
 };
   
 

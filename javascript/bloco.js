@@ -3,8 +3,6 @@ let btnAddTarefa = document.querySelector('#btnAddTarefa');
 let listaTarefa = document.querySelector('#listaTarefa');
 
 
-
-
 btnAddTarefa.addEventListener('click', (e) => {
     let tarefa = {
         nome: inputNovaTarefa.value,
@@ -79,15 +77,3 @@ function criarTagLI(tarefa){
     }
 }
 
-function editar(){
-    // alert(idTarefa);
-
-    
-}
-
-
-function excluir(idTarefa){
-    // alert(idTarefa);
-
-
-}
