@@ -33,7 +33,7 @@ inputNomeLivro.addEventListener("input", (event) => {
                     modalOptionsLivro.appendChild(opBook);
                     opBook.addEventListener("click", () => {
                         inputNomeLivro.value = livro.livro;
-                        document.getElementById('inputEmprestimoTombo').value = livro.tombo;
+                        // document.getElementById('inputEmprestimoTombo').value = livro.tombo;
                         document.getElementById('inputEmprestimoAutor').value = livro.autor;
                         modalOptionsLivro.style.display = "none";
                     });
